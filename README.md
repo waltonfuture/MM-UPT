@@ -10,13 +10,7 @@ This project is built based on [EasyR1](https://github.com/hiyouga/EasyR1) proje
 
 ## Introduction
 
-In this work, we are the first to investigate the use of GRPO, a stable and scalable online RL algorithm, for enabling MLLM's continual self-improvement without any external supervision. 
-We propose MM-UPT, a simple yet effective framework for unsupervised post-training of MLLMs.
-MM-UPT builds upon GRPO, replacing traditional reward signals with a self-rewarding mechanism based on majority voting over multiple sampled responses. 
-Our experiments demonstrate that MM-UPT significantly improves the reasoning ability of Qwen2.5-VL-7B (e.g., 66.3\% ? 72.9\% on MathVista, 62.9\% ? 68.7\% on We-Math), using standard dataset without ground truth labels.
-MM-UPT also outperforms prior unsupervised baselines and even approaches the results of supervised GRPO.  
-Furthermore, we show that incorporating synthetic questions, generated solely by MLLM itself, can boost performance as well, highlighting a promising approach for scalable self-improvement.
-Overall, MM-UPT offers a new paradigm for continual, autonomous enhancement of MLLMs in the absence of external supervision.
+In this work, we are the first to investigate the use of GRPO, a stable and scalable online RL algorithm, for enabling MLLM's continual self-improvement without any external supervision. We propose MM-UPT, a simple yet effective framework for unsupervised post-training of MLLMs. MM-UPT builds upon GRPO, replacing traditional reward signals with a self-rewarding mechanism based on majority voting over multiple sampled responses. Our experiments demonstrate that MM-UPT significantly improves the reasoning ability of Qwen2.5-VL-7B (e.g., 66.3\% → 72.9\% on MathVista, 62.9\% → 68.7\% on We-Math), using standard dataset without ground truth labels. MM-UPT also outperforms prior unsupervised baselines and even approaches the results of supervised GRPO. Furthermore, we show that incorporating synthetic questions, generated solely by MLLM itself, can boost performance as well, highlighting a promising approach for scalable self-improvement. Overall, MM-UPT offers a new paradigm for continual, autonomous enhancement of MLLMs in the absence of external supervision.
 
 <div align=center>
 <img src="assets/mm-upt.png"  width = "80%" alt="mm-upt" align=center/>
