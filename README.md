@@ -1,7 +1,7 @@
 # Unsupervised Post-Training for Multi-Modal LLM Reasoning via GRPO
 
 <p align="center">
-?? <a href="https://huggingface.co/WaltonFuture/Qwen2.5-VL-7B-MM-UPT-MMR1" target="_blank">Model</a> £ü? <a href="https://arxiv.org/pdf/2409.13191" target="_blank">Paper</a> <br>
+<a href="https://huggingface.co/WaltonFuture/Qwen2.5-VL-7B-MM-UPT-MMR1" target="_blank">Model</a> | <a href="https://arxiv.org/pdf/2409.13191" target="_blank">Paper</a> <br>
 </p>
 
 
