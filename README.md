@@ -65,7 +65,7 @@ Here's a table showing the two synthetic method types across the three datasets:
 
 Our models are built upon the amazing [Qwen2.5-VL](https://huggingface.co/collections/Qwen/qwen25-vl-6795ffac22b334a837c0f9a5) family.
 We thank [EasyR1](https://github.com/hiyouga/EasyR1)  for the training codes.
-Concurrent work ([TTRL](https://github.com/PRIME-RL/TTRL)) demonstrates strong performance in test-time training.
+We also notice that a concurrent work, [TTRL](https://github.com/PRIME-RL/TTRL), demonstrates strong performance in test-time training with a similar idea.
 
 ## Contact
 
