@@ -56,7 +56,7 @@ Here's a table showing the two synthetic method types across the three datasets:
 
 | Synthetic Method | Geometry3K | GeoQA | MMR1 |
 |------------------|------------|-------|------|
-| In-Context Synthesizing         |    [Geometry3K-1](https://huggingface.co/datasets/WaltonFuture/geometry3k-in-context-synthesizing)        |   [GeoQA-1](https://huggingface.co/datasets/WaltonFuture/GeoQA-8K-in-context-synthesizing)    |  [MMR1-1](WaltonFuture/MMR1-in-context-synthesizing)    |
+| In-Context Synthesizing         |    [Geometry3K-1](https://huggingface.co/datasets/WaltonFuture/geometry3k-in-context-synthesizing)        |   [GeoQA-1](https://huggingface.co/datasets/WaltonFuture/GeoQA-8K-in-context-synthesizing)    |  [MMR1-1](https://huggingface.co/datasets/WaltonFuture/MMR1-in-context-synthesizing)    |
 | Direct Synthesizing         |    [Geometry3K-2](https://huggingface.co/datasets/WaltonFuture/geometry3k-direct-synthesizing)         | [GeoQA-2](https://huggingface.co/datasets/WaltonFuture/GeoQA-8K-direct-synthesizing)      | [MMR1-2](https://huggingface.co/datasets/WaltonFuture/MMR1-direct-synthesizing)     |
 
 
