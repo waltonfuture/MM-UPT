@@ -71,13 +71,10 @@ Please contact Lai Wei (waltonfuture@sjtu.edu.cn) if needed.
 
 ## Citation
 ```
-@misc{wei2025unsupervisedposttrainingmultimodalllm,
-      title={Unsupervised Post-Training for Multi-Modal LLM Reasoning via GRPO}, 
-      author={Lai Wei and Yuting Li and Chen Wang and Yue Wang and Linghe Kong and Weiran Huang and Lichao Sun},
-      year={2025},
-      eprint={2505.22453},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2505.22453}, 
+@article{wei2025unsupervised,
+  title={Unsupervised Post-Training for Multi-Modal LLM Reasoning via GRPO},
+  author={Wei, Lai and Li, Yuting and Wang, Chen and Wang, Yue and Kong, Linghe and Huang, Weiran and Sun, Lichao},
+  journal={arXiv preprint arXiv:2505.22453},
+  year={2025}
 }
 ```
