@@ -1,7 +1,7 @@
 # Unsupervised Post-Training for Multi-Modal LLM Reasoning via GRPO
 
 <p align="center">
-<a href="https://huggingface.co/WaltonFuture/Qwen2.5-VL-7B-MM-UPT-MMR1" target="_blank">Model</a> | <a href="https://arxiv.org/pdf/2505.22453" target="_blank">Paper</a> <br>
+⬇️ <a href="https://huggingface.co/WaltonFuture/Qwen2.5-VL-7B-MM-UPT-MMR1" target="_blank">Model</a> | 📃 <a href="https://arxiv.org/pdf/2505.22453" target="_blank">Paper</a> <br>
 </p>
 
 
@@ -63,7 +63,8 @@ Please refer to these synthetic datasets built on different seed datasets using 
 
 Our models are built upon the amazing [Qwen2.5-VL](https://huggingface.co/collections/Qwen/qwen25-vl-6795ffac22b334a837c0f9a5) family.
 We thank [EasyR1](https://github.com/hiyouga/EasyR1)  for the training codes.
-We also notice that a concurrent work, [TTRL](https://github.com/PRIME-RL/TTRL), demonstrates strong performance in test-time training with a similar idea.
+We also notice that several concurrent works have explored similar ideas. [TTRL](https://github.com/PRIME-RL/TTRL), demonstrates strong performance in test-time training with this approach idea.
+[SRT](https://github.com/tajwarfahim/srt) adopts this paradigm for the unsupervised self-training of LLMs.
 
 ## Contact
 
