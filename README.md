@@ -9,7 +9,7 @@
   Yue Wang<sup>3</sup>,
   Linghe Kong<sup>1</sup>, 
   Weiran Huang<sup>1,2*</sup>
-  Lichao Sun<sup>4</sup>,
+  Lichao Sun<sup>4</sup>
 </div>
 
   
