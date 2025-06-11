@@ -35,7 +35,19 @@ In this work, we are the first to investigate the use of GRPO, a stable and scal
 <img src="assets/mm-upt.png"  width = "80%" alt="mm-upt" align=center/>
 </div>
 
+## 🌟 Results
 
+We firstly employ standard training datasets with masked labels. MM-UPT achieves consistent improvements in average over the base Qwen2.5-VL-7B model across all datasets, also outperforming other baseline methods such as SRLM, LMSI, Genixer, and STIC. We find that MM-UPT is even competitive with supervised post-training methods, such as rejection sampling-based SFT and GRPO. 
+
+<div align=center>
+<img src="assets/exp.png"  width = "80%" alt="mm-upt" align=center/>
+</div>
+
+In addition, we investigate the use of unlabeled synthetic data to improve MLLMs. This aligns with the ultimate goal of MM-UPT: enabling continual self-improvement even after human-created data is exhausted. Our experiments reveal that both in-context and direct synthesizing lead to significant improvements over the base model, achieving performance comparable to training on original human-written questions. This shows that synthetic questions can effectively enhance the model's reasoning ability under MM-UPT. 
+
+<div align=center>
+<img src="assets/syn.png"  width = "80%" alt="mm-upt" align=center/>
+</div>
 
 ## ✨ Example: Train Qwen2.5-VL-7B using MM-UPT on [MMR1](https://huggingface.co/datasets/MMR1/MMR1-Math-RL-Data-v0) Dataset without Labels
 
