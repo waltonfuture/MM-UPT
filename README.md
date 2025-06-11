@@ -49,10 +49,10 @@ In addition, we investigate the use of unlabeled synthetic data to improve MLLMs
 <img src="assets/syn.png"  width = "80%" alt="mm-upt" align=center/>
 </div>
 
-## ✨ Example: Train Qwen2.5-VL-7B using MM-UPT on [MMR1](https://huggingface.co/datasets/MMR1/MMR1-Math-RL-Data-v0) Dataset without Labels
+## 🚀 Example: Train Qwen2.5-VL-7B using MM-UPT on [MMR1](https://huggingface.co/datasets/MMR1/MMR1-Math-RL-Data-v0) Dataset without Labels
 
 
-### Setup
+### 🛠️ Setup
 
 ```bash
 git clone https://github.com/waltonfuture/MM-UPT.git
@@ -72,6 +72,66 @@ bash examples/qwen2_5_vl_7b_mmr1.sh
 python3 scripts/model_merger.py --local_dir checkpoints/mm-upt/qwen2_5_vl_7b_mmr1/global_step_80/actor
 ```
 
+## ✨ Evaluation
+
+We provide the input format of vllm for the evaluation of our models and Qwen2.5-VL. In particular, we prompt the model to put the final answer into \boxed{}, and then we extract the answer from it.
+
+```bash
+from transformers import AutoProcessor
+from vllm import LLM, SamplingParams
+from qwen_vl_utils import process_vision_info
+
+llm = LLM(
+    model=MODEL_PATH, # the model path
+    limit_mm_per_prompt={"image": 1, "video": 1},
+    dtype=torch.bfloat16,
+    gpu_memory_utilization=0.8,
+    enforce_eager=True,
+    tensor_parallel_size=2,
+    trust_remote_code=True
+)
+
+sampling_params = SamplingParams(
+    max_tokens=16384,
+    temperature=0.2,
+    stop_token_ids=[],
+)
+
+processor = AutoProcessor.from_pretrained(MODEL_PATH,max_pixels = 1204224)
+
+messages = [
+    {"role": "system", "content": "You are a helpful assistant."},
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "image",
+          "image": img, # image path
+          "min_pixels": 224 * 224,
+          "max_pixels": 1280 * 28 * 28,
+        },
+        {"type": "text", "text": f'{instruction}'+ " Please reason step by step, and put your final answer within \\boxed{}."}, # instruction is the textual input
+      ],
+    },
+]
+prompt = processor.apply_chat_template(
+  messages,
+  tokenize=False,
+  add_generation_prompt=True
+)
+image_inputs, video_inputs = process_vision_info(messages)
+mm_data = {}
+mm_data["image"] = image_inputs
+llm_inputs = {
+  "prompt": prompt,
+  "multi_modal_data": mm_data,
+}
+prompt_list = [llm_inputs]
+llm_outputs = llm.generate(prompt_list, sampling_params=sampling_params)
+response = llm_outputs[i].outputs[0].text
+print(response)
+```
+
 ## 🎯 Model and Datasets
 
 Our model trained based on the above script is available [here](https://huggingface.co/WaltonFuture/Qwen2.5-VL-7B-MM-UPT-MMR1).
@@ -83,7 +143,7 @@ For other standard datasets used in our paper, please refer to:
 - [GeoQA](https://huggingface.co/datasets/WaltonFuture/GEOQA_R1V_Train_8K)
 
 
-## 🍭 Using Synthetic Datasets
+## 🤗 Using Synthetic Datasets
 
 Please refer to these synthetic datasets built on different seed datasets using two synthetic methods.
 
