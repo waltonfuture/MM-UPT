@@ -1,5 +1,24 @@
 # Unsupervised Post-Training for Multi-Modal LLM Reasoning via GRPO
 
+
+
+<div align="center">
+  Lai Wei<sup>1,3</sup>,
+  Yuting Li<sup>1</sup>,
+  Chen Wang<sup>3</sup>,
+  Yue Wang<sup>3</sup>,
+  Linghe Kong<sup>1</sup>, 
+  Weiran Huang<sup>1,2*</sup>
+  Lichao Sun<sup>4</sup>,
+</div>
+
+  
+<p align="center">
+<i>
+1. School of Computer Science, Shanghai Jiao Tong University &nbsp;<br> 2. Shanghai Innovation Institute &nbsp; 3. Zhongguancun Academy &nbsp; <br>  4. Lehigh University &nbsp;
+</i>
+</p>
+
 <p align="center">
 ⬇️ <a href="https://huggingface.co/WaltonFuture/Qwen2.5-VL-7B-MM-UPT-MMR1" target="_blank">Model</a> | 📃 <a href="https://arxiv.org/pdf/2505.22453" target="_blank">Paper</a> <br>
 </p>
@@ -20,6 +39,8 @@ In this work, we are the first to investigate the use of GRPO, a stable and scal
 
 ## ✨ Example: Train Qwen2.5-VL-7B using MM-UPT on [MMR1](https://huggingface.co/datasets/MMR1/MMR1-Math-RL-Data-v0) Dataset without Labels
 
+
+### Setup
 
 ```bash
 git clone https://github.com/waltonfuture/MM-UPT.git
